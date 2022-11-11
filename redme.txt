@@ -1,0 +1,32 @@
+Бот создает записи в гугл таблицу
+После запуска вводятся расходы в фотмате
+[КАТЕГОРИЯ-ЦЕНА-КОММЕНТАРИЙ]
+Предварительно надо создать гугл таблицу и
+
+
+Можно взять в сылке гугл таблицы (создайте таблице для подключения к проекту)
+Пример
+https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0
+Включаем API доступ для проекта
+Переходим в Google Developers Console и создаем новый проект
+https://console.developers.google.com/project
+
+1. Добавляем Google Drive API и Google Sheets API в проект
+2 Добавить учетные данные, кнопка “Создать учетные записи” в странице “API и сервисы”
+3. Скачайте JSON файл с доступами API
+4. Переименуйте и разместите скачанный JSON файл в папку “~/.config/gspread/service_account.json”. Пользователи Windows должны разместить в папку “%APPDATA%\gspread\service_account.json”
+5. Зайдите в гугл таблицу и предоставьте доступ к пользователю значение client_email из этого файла.
+
+Библиотеки
+Для работы с GoogleSpreadsheet, - gspread
+
+Переменные
+googlesheet_id=spreadsheetId
+TOKEN получить при создании бота в телеграм  в @BotFather
+
+Cоздайте в рабочей Директории файл с токенами
+config.py
+Добавьте туда полученные токены
+пример
+TOKEN = '5643749374:AAH46547458d7XbJPoHYB47747'
+googlesheet_id = 'hfjgkt77899dBU_iQE8tG65oy_bYwXFrQQ66'
